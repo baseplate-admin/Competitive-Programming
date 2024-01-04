@@ -8,6 +8,8 @@ _input_list = []
 #     else:
 #         break
 
+# Hack is from
+# https://codeforces.com/blog/entry/54228
 for line in sys.stdin:
     if line != "":
         _input_list.append(line)
