@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-void main(){
+int main(){
     int no_of_input,can_answer=0;
 
     scanf("%d",&no_of_input);
@@ -17,4 +17,5 @@ void main(){
         no_of_input--;
     }
     printf("%d\n",can_answer);
+    return 0;
 }
