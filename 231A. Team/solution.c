@@ -16,5 +16,5 @@ void main(){
         if (no_of_yes >= 2) can_answer++;
         no_of_input--;
     }
-    printf("%d",can_answer);
+    printf("%d\n",can_answer);
 }
