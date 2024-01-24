@@ -5,8 +5,10 @@ int main(){
 
     scanf("%d %d",&size_of_array,&index_to_check);
 
-    
+    char str[100];
+    scanf("%[^\n]%*c",str);
 
+    printf("%d",&str);
 
     return 0;
 }
