@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define _OPEN_SYS_ITOA_EXT
 
 int main(){
     int a[10];
