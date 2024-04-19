@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+
+
 int main(){
-    int n;
+    int n=0;
     scanf("%d",&n);
 
     int p[n];
@@ -23,29 +25,37 @@ int main(){
         }
     }
 
-    for(int i=0;i<p_i;i++){
-        int temp;
-        if(p[i]>p[i+1]){
-            temp = p[i];
-            p[i] = p[i+1];
-            p[i+1] = temp;
-        }
+
+    int flag = 0;
+    for(int i=1;i<=n;i++){
+            int flag_1=0,flag_2=0;
+
+            for(int j=1;j<p_i;j++){
+                if(p[j] == i) {
+                    flag_1 = 1;
+                    break;
+                }
+            }
+            if (flag_1 == 0){
+                for(int j=1;j<q_i;j++){
+                    if(q[j] == i){
+                        flag_2 = 1;
+                        break;
+                    }
+                }
+                if(flag_2 == 0){
+                    flag = 1;
+                    break;
+
+                }
+            }
+
+
     }
-    for(int i=0;i<q_i;i++){
-        int temp;
-        if(q[i]>q[i+1]){
-            temp = q[i];
-            q[i] = q[i+1];
-            q[i+1] = temp;
-        }
-    }
-
-
-
-     if(p[n-1]==n || q[n-1]==n){
-        printf("I become the guy.\n");
+    if(flag == 1){
+        printf("Oh, my keyboard!");
     }else{
-        printf("Oh, my keyboard!\n");
+        printf("I become the guy.");
     }
 
 }
